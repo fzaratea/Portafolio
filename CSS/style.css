@@ -207,6 +207,7 @@ aside#der input[type="submit"] {
   width: 200px;
   background: rgb(58, 106, 239);
   border: 0;
+  cursor: pointer;
 }
 
 footer {
