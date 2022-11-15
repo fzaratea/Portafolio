@@ -14,18 +14,23 @@ export const MiPrimerEstado = () => {
 
     const [ nombre, setNombre ] = useState("Fredy Zárate");
 
-    const cambiarNombre = e => {
-        setNombre("Francisco");
+    const cambiarNombre = (e, nombreFijo) => {
+        setNombre(nombreFijo);
     }
 
   return (
     <div>
         <h3>Componente: MiPrimerEstado</h3>
-        <strong>
+        <strong className='label'>
             {nombre}
         </strong>
+
         &nbsp;
-        <button onClick={ cambiarNombre }>Cambiar Nombre</button>
+        <button onClick={ e => cambiarNombre(e, "Francisco") }>Cambiar Nombre</button>
+
+        &nbsp;
+        <input type="text" onChange={ e => cambiarNombre(e, e.target.value) } placeholder='Cambia el nombre' />
+
     </div>
   )
 }
