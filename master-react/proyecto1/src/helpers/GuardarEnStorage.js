@@ -1,7 +1,7 @@
-export const guardarEnStorage = (clave, elemento)=> {
+export const GuardarEnStorage = (clave, elemento) => {
         
     //conseguir los elementos que ya tenemos en Local storage
-    let elementos = JSON.parse(localStorage.getItem("clave"));
+    let elementos = JSON.parse(localStorage.getItem(clave));
 
     // Comprobar si es un array
     if(Array.isArray(elementos)){
